@@ -1,0 +1,7 @@
+{
+  "name": "tneapp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
