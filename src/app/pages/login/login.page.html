@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-title>Iniciar Sesión</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content [fullscreen]="true" class="ion-padding">
+    <div class="login-container">
+      <form (ngSubmit)="onLogin()" #loginForm="ngForm">
+        <ion-item>
+          <ion-label position="floating">Correo Electrónico</ion-label>
+          <ion-input type="email" [(ngModel)]="email" name="email" required></ion-input>
+          <ion-note color="danger" *ngIf="email && !validateEmail(email)">Correo electrónico inválido</ion-note>
+        </ion-item>
+  
+        <ion-item>
+          <ion-label position="floating">Contraseña</ion-label>
+          <ion-input [type]="passwordType" [(ngModel)]="password" name="password" required></ion-input>
+          <ion-icon name="eye" slot="end" (click)="togglePasswordVisibility()"></ion-icon>
+        </ion-item>
+  
+        <ion-button expand="full" type="submit" class="ion-margin-top">Iniciar Sesión</ion-button>
+      </form>
+  
+      <ion-button expand="full" color="light" class="ion-margin-top" (click)="onRegister()">
+        ¿No tienes cuenta? Regístrate
+      </ion-button>
+  
+      <ion-button expand="full" color="light" class="ion-margin-top" (click)="onRecoverPassword()">
+        Recuperar Contraseña
+      </ion-button>
+    </div>
+  </ion-content>
