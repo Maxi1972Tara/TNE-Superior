@@ -30,3 +30,4 @@ export class RecoverPasswordPage implements OnInit {
     return emailPattern.test(email);
   }
 }
+
