@@ -16,8 +16,12 @@ const routes: Routes = [
     loadChildren: () => import('./pages/recover-password/recover-password.module').then( m => m.RecoverPasswordPageModule)
   },
   {
-    path: 'create-email',
-    loadChildren: () => import('./pages/create-email/create-email.module').then( m => m.CreateEmailPageModule)
+    path: 'registration',
+    loadChildren: () => import('./pages/registration/registration.module').then( m => m.RegistrationPageModule)
+  },
+  {
+    path: 'inicio',
+    loadChildren: () => import('./pages/inicio/inicio.module').then( m => m.InicioPageModule)
   },
 ];
 
