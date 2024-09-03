@@ -24,7 +24,7 @@ export class LoginPage implements OnInit {
     console.log('Login button clicked');
   }
   onRegister() {
-    this.router.navigate(['/create-email']);
+    this.router.navigate(['/registration']);
   }
   onRecoverPassword() {
     this.router.navigate(['/recover-password']);
